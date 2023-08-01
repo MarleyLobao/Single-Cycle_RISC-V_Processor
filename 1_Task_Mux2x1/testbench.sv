@@ -56,13 +56,13 @@ module simple_testbench;
     $dumpfile("design.vcd");
     $dumpvars;
 	
-	tb_KEY[0] = 1'b0;
+    tb_KEY[0] = 1'b0;
 	
     tb_SW[7:0]  = 8'h0f;
     tb_SW[15:8] = 8'hf0;
     tb_SW[17]   = 1'b0;
     tb_KEY[1]   = 1'b0;
-	#5;
+    #5;
     if(tb_LEDR[7:0] == 8'h0f) $display("Test 1: PASS");
     else $display("Test 1: FAIL");
     #5;
@@ -70,7 +70,7 @@ module simple_testbench;
     tb_SW[15:8] = 8'hf0;
     tb_SW[17]   = 1'b1;
     tb_KEY[1]   = 1'b0;
-	#5;
+    #5;
     if(tb_LEDR[7:0] == 8'hf0) $display("Test 2: PASS");
     else $display("Test 2: FAIL");
     #5;
@@ -78,7 +78,7 @@ module simple_testbench;
     tb_SW[15:8] = 8'hfa;
     tb_SW[17]   = 1'b1;
     tb_KEY[1]   = 1'b0;
-	#5;
+    #5;
     if(tb_LEDR[7:0] == 8'hfa) $display("Test 3: PASS");
     else $display("Test 3: FAIL");
     #5;
@@ -86,13 +86,12 @@ module simple_testbench;
     tb_SW[15:8] = 8'hfa;
     tb_SW[17]   = 8'h0f;
     tb_KEY[1]   = 1'b1;
-	#5;
+    #5;
     if(tb_LEDR[7:0] == 8'hfa) $display("Test 4: PASS");
     else $display("Test 4: FAIL");
-    #5;
 
-	#200;
-	$stop;
+    #200;
+    $stop;
   end
 
 endmodule
