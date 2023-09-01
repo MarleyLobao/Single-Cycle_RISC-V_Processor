@@ -1,6 +1,6 @@
 module count_m10(
-	input logic clk, rst,
-	output logic [3:0] count
+  input logic clk, rst,
+  output logic [3:0] count
 );
 
   always_ff @(posedge clk, negedge rst) begin

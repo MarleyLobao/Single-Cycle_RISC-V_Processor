@@ -29,30 +29,30 @@ module simple_testbench;
   always #(PERIOD_NS_50/2) tb_CLOCK_50 = ~tb_CLOCK_50;
 
   Mod_Test MT (
-	.CLOCK_27(tb_CLOCK_27),
-	.CLOCK_50(tb_CLOCK_50),
-	.KEY(tb_KEY),
-	.SW(tb_SW),
-	.HEX0(tb_HEX0),
-	.HEX1(tb_HEX1),
-	.HEX2(tb_HEX2),
-	.HEX3(tb_HEX3),
-	.HEX4(tb_HEX4),
-	.HEX5(tb_HEX5),
-	.HEX6(tb_HEX6),
-	.HEX7(tb_HEX7),
-	.LEDG(tb_LEDG),
-	.LEDR(tb_LEDR),
-	.UART_TXD(tb_UART_TXD),
-	.UART_RXD(tb_UART_RXD),
-	.w_d0x0, .w_d0x1, .w_d0x2, .w_d0x3, .w_d0x4, .w_d0x5,
-	.w_d1x0, .w_d1x1, .w_d1x2, .w_d1x3, .w_d1x4, .w_d1x5,
-	.GPIO_0(tb_GPIO_0),
-	.GPIO_1(tb_GPIO_1)
+    .CLOCK_27(tb_CLOCK_27),
+    .CLOCK_50(tb_CLOCK_50),
+    .KEY(tb_KEY),
+    .SW(tb_SW),
+    .HEX0(tb_HEX0),
+    .HEX1(tb_HEX1),
+    .HEX2(tb_HEX2),
+    .HEX3(tb_HEX3),
+    .HEX4(tb_HEX4),
+    .HEX5(tb_HEX5),
+    .HEX6(tb_HEX6),
+    .HEX7(tb_HEX7),
+    .LEDG(tb_LEDG),
+    .LEDR(tb_LEDR),
+    .UART_TXD(tb_UART_TXD),
+    .UART_RXD(tb_UART_RXD),
+    .w_d0x0, .w_d0x1, .w_d0x2, .w_d0x3, .w_d0x4, .w_d0x5,
+    .w_d1x0, .w_d1x1, .w_d1x2, .w_d1x3, .w_d1x4, .w_d1x5,
+    .GPIO_0(tb_GPIO_0),
+    .GPIO_1(tb_GPIO_1)
   );
 
   initial begin : simulation_test
-  	tb_CLOCK_50 = 1'b1;
+    tb_CLOCK_50 = 1'b1;
 
     $dumpfile("design.vcd");
     $dumpvars;
